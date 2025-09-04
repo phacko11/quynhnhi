@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc Mừng Quỳnh Nhi 18 Tuổi 💕</title>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💕</text></svg>" type="image/svg+xml">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Night Sky Background -->
+    <div class="night-sky">
+        <div class="moon"></div>
+        <div class="stars"></div>
+        <div class="shooting-star"></div>
+    </div>
+
+    <audio id="backgroundMusic" loop autoplay >
+        <source src="phepmau.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="welcomeModal" class="modal">
+        <div class="modal-content welcome-modal">
+            <div class="modal-header">
+                <h1>  ✨ Cục Vàng Quỳnh Nhi 18 Tuổi! ✨</h1>
+                <span class="close" id="welcomeClose">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p class="welcome-message">
+                    Gửi em, hôm nay em tròn 18 tuổi rồi! Anh đã chuẩn bị 18 lá thư đặc biệt dành riêng cho em. 
+                    Mỗi lá thư là một lời yêu thương mà anh muốn gửi đến Quỳnh Nhi. Từ anh Phước 💕
+                </p>
+                <h3>📋 Hướng dẫn sử dụng dành cho cục vàng:</h3>
+                <ul class="instructions">
+                    <li>💌 Nhấp vào từng ô để đọc thư tình từ anh Phước viết cho em nhaaa</li>
+                    <li>🔇 Anh để mặc định là tắt nhạc, nếu được em hãy mở nhạc rồi hẵng đọc thư nha</li>
+                    <li>💾 Chỗ để em lưu về những bức thư tình trên về máyyy </li>
+                </ul>
+                <button class="btn btn--primary" id="startExploring">Lets go, anh thương em nhìu 💖</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <header class="site-header">
+            <h1 class="main-title"> 💕 18 Lá Thư Tình - 18 tuổi của em 💕</h1>
+            <p class="subtitle"> 💟 Dành tặng Nguyễn Phạm Quỳnh Nhi - my one and only 💟</p>
+            <p class="subtitle">Chúc Quỳnh Nhi tuổi 18 rực rỡ, luôn xinh đẹp, mạnh mẽ, tự tin theo đuổi ước mơ, gặp nhiều niềm vui và bình an, hạnh phúc bên anh.</p>
+        </header>
+
+        <!-- Letters Grid (6x3 = 18 letters) -->
+        <div class="letters-grid">
+ 
+            <div class="letter-box" data-letter="1">
+                <span class="letter-number">1</span>
+            </div>
+            <div class="letter-box" data-letter="2">
+                <span class="letter-number">2</span>
+            </div>
+            <div class="letter-box" data-letter="3">
+                <span class="letter-number">3</span>
+            </div>
+            <div class="letter-box" data-letter="4">
+                <span class="letter-number">4</span>
+            </div>
+            <div class="letter-box" data-letter="5">
+                <span class="letter-number">5</span>
+            </div>
+            <div class="letter-box" data-letter="6">
+                <span class="letter-number">6</span>
+            </div>
+            <div class="letter-box" data-letter="7">
+                <span class="letter-number">7</span>
+            </div>
+            <div class="letter-box" data-letter="8">
+                <span class="letter-number">8</span>
+            </div>
+            <div class="letter-box" data-letter="9">
+                <span class="letter-number">9</span>
+            </div>
+            <div class="letter-box" data-letter="10">
+                <span class="letter-number">10</span>
+            </div>
+            <div class="letter-box" data-letter="11">
+                <span class="letter-number">11</span>
+            </div>
+            <div class="letter-box" data-letter="12">
+                <span class="letter-number">12</span>
+            </div>
+            <div class="letter-box" data-letter="13">
+                <span class="letter-number">13</span>
+            </div>
+            <div class="letter-box" data-letter="14">
+                <span class="letter-number">14</span>
+            </div>
+            <div class="letter-box" data-letter="15">
+                <span class="letter-number">15</span>
+            </div>
+            <div class="letter-box" data-letter="16">
+                <span class="letter-number">16</span>
+            </div>
+            <div class="letter-box" data-letter="17">
+                <span class="letter-number">17</span>
+            </div>
+            <div class="letter-box" data-letter="18">
+                <span class="letter-number">18</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Control Buttons -->
+    <div class="bottom-controls">
+        <button class="control-btn" id="qrBtn" title="Mã QR">
+            📱
+        </button>
+        <button class="control-btn" id="audioBtn" title="Tắt/Bật nhạc">
+            🔊
+        </button>
+        <button class="control-btn" id="giftBtn" title="Món quà bí mật">
+            🎁
+        </button>
+    </div>
+
+    <!-- Letter Modal -->
+    <div id="letterModal" class="modal">
+        <div class="modal-content letter-modal">
+            <span class="close" id="letterClose">&times;</span>
+            <div class="modal-body">
+                <h3 id="letterTitle">Bức thư tình số 1</h3>
+                <img id="letterImage" src="" alt="Letter Image">
+            </div>
+        </div>
+    </div>
+
+    <!-- QR Code Modal -->
+    <div id="qrModal" class="modal">
+        <div class="modal-content qr-modal">
+            <div class="modal-header">
+                <h3>Quét mã QR lưu thư lại nha</h3>
+                <span class="close" id="qrClose">&times;</span>
+            </div>
+            <div class="modal-body">
+                <img src="qr.png" alt="QR Code" class="qr-image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Secret Gift Modal -->
+    <div id="giftModal" class="modal">
+        <div class="modal-content gift-modal">
+            <div class="modal-header">
+                <h3>🎁 Món quà bí mật từ anh (click the moon when u finish the letters =)) )</h3>
+                <span class="close" id="giftClose">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p class="gift-message">Đây là những khoảnh khắc đáng iu nhất của em (hoặc của mình). Anh thương em nhiều lắm, mong rằng mình sẽ "quãng đời mai sau, luôn cạnh nhau" 💕</p>
+                
+                <div class="gift-gallery">
+                    <img src="secret/1.jpg" alt="Ảnh kỷ niệm 1" class="gift-image">
+                    <img src="secret/2.jpg" alt="Ảnh kỷ niệm 2" class="gift-image">
+                    <img src="secret/3.jpg" alt="Ảnh kỷ niệm 3" class="gift-image">
+                    <img src="secret/4.jpg" alt="Ảnh kỷ niệm 4" class="gift-image">
+                    <img src="secret/5.jpg" alt="Ảnh kỷ niệm 5" class="gift-image">
+                    <img src="secret/6.jpg" alt="Ảnh kỷ niệm 6" class="gift-image">
+                    <img src="secret/7.jpg" alt="Ảnh kỷ niệm 7" class="gift-image">
+                    <img src="secret/8.jpg" alt="Ảnh kỷ niệm 8" class="gift-image">
+                    <img src="secret/9.jpg" alt="Ảnh kỷ niệm 9" class="gift-image">
+                    <img src="secret/10.jpg" alt="Ảnh kỷ niệm 10" class="gift-image">
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+    <!-- Special Heart Modal -->
+    <div id="heartModal" class="modal">
+        <div class="modal-content heart-special-modal">
+            <div class="modal-header">
+                <h3>💖 Lời nhắn nhủ cho cục vàng 💖</h3>
+                <span class="close" id="heartClose">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="heart-special-content">
+                    <div class="heart-animation">💖</div>
+                    <p class="heart-message">
+                        Quỳnh Nhi cute oi! 💕<br><br>
+                        Chúc mừng Quỳnh Nhi sinh nhật 18 tuổi <br><br>
+                        <strong> Cảm ơn em đã bước vào đời anh, đã chọn thương anh giữa muôn người. Tuổi 18 của em là khởi đầu rực rỡ, và anh muốn ở bên chứng kiến từng bước em đi. Chúc em tuổi mới luôn rạng rỡ, được yêu thương, và hạnh phúc thật nhiều – như cách em đã làm anh hạnh phúc.</strong> 🌟
+                        Nay sinh nhật em nhưng anh p mới là người có món quà tuyệt vời nhất thế giới💝<br><br>
+                        Anh sẽ luôn ở đây, luôn dành thời gian cho em, yêu thương và bảo vệ Quỳnh Nhi 💕
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
